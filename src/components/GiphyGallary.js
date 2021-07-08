@@ -83,6 +83,9 @@ const GiphyGallary = () => {
               handleOnClick={handleOnClick}
             />
           ))}
+        {Array.isArray(searchGiphy) && searchGiphy.length > 0 && (
+          <div className="search-results">Search result</div>
+        )}
         {Array.isArray(searchGiphy) &&
           searchGiphy.length > 0 &&
           searchGiphy.map((item) => (
